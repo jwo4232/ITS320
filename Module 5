@@ -1,0 +1,18 @@
+def rev(one, two, three):
+    print("Reverse of the third string is",three[::-1])
+
+# returning concatenation of first two strings
+    return three[::-1]+two[::-1]+one[::-1]
+
+def main():
+
+    # Taking user input of 3 strings
+    first = input("Enter first string:")
+    second = input("Enter second string:")
+    third = input("Enter third string:")
+
+
+    # calling function, passing three arguments
+    print("Reverse of all strings are",rev(first, second, third))
+
+main()
