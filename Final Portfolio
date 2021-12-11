@@ -1,0 +1,133 @@
+#Final Portfolio: Week 1-8
+#Jung On
+#ITS320
+#3/10/2019
+
+#Week 1 Option 2: Create a Python Application
+#Wrote a program that read and printed integers. 
+#Operations used were integer division (//), float division (/), and modulo division (%). 
+
+a = int(4)
+b = int(3)
+print(a//b) 
+print(a/b)
+print(a%b)
+
+#Week 2 Option 1: Creating a Python Application
+#Wrote a program that reads a string and checks for various conditions.
+#Code checked the string for alphanumerical, alphabetical, digits, lowercase characters, and uppercase characters. 
+#Fixed a previous submission by giving the code user input now. 
+
+if __name__ == '__main__':
+	s = str(input('Enter String Value: '))
+	if any(alphabet.isalnum() for alphabet in s):
+		print ('True')
+	else:
+		print ('False')
+	if any(alphabet.isalpha() for alphabet in s):
+		print ('True')
+	else:
+		print ('False')
+	if any(alphabet.isdigit() for alphabet in s):
+		print ('True')
+	else:
+		print ('False')
+	if any(alphabet.islower() for alphabet in s):
+		print ('True')
+	else:
+		print ('False')
+	if any(alphabet.isupper() for alphabet in s):
+		print ('True')
+	else:
+		print ('False')
+
+#Week 3 Option 1: Creating a program to calculate the value of a ferrari
+#Wrote a program that reads the year and estimates the value of a ferrari 250 GTO.
+#Put data in from the table provided to get the program to work.
+
+year =  int(input('Enter year:\n'))
+
+if year < 1962:
+    print('Car did not exist yet!')
+elif year <= 1964:
+    print('$', 18500)
+elif year <= 1968:
+    print('$', 6000)
+elif year <= 1971:
+    print('$', 12000)
+elif year <= 1975:
+    print('$', 48000)
+elif year <= 1980:
+    print('$', 200000)
+elif year <= 1985:
+    print('$', 650000)
+elif year <= 2012:
+    print('$', 35000000)
+elif year <= 2014:
+    print('$', 52000000)
+if year > 2014:
+    print('Data does not exist yet!')
+
+#Week 4 Option 2: Repetition Control Structure – Grade Statistics
+#Wrote a program that utilized a loop to read five floating-point grades that the user inputs. 
+#The data printed were Average, Maximum, and Minimum
+
+def main():
+    scores = get_scores()
+    total = get_total(scores)
+    average = total/len(scores)
+    my_list = [get_scores]
+    print('The lowest score is: ', min(scores))
+    print('The highest score is: ', max(scores))
+    print('the average is: ', average)
+
+def get_scores():
+    test_scores = []
+    for scores in range(5):
+        value = float(input('Enter score: '))
+        test_scores.append(value)
+    return test_scores
+
+def get_total(value_list):
+    total = 0.0
+    for num in value_list:
+        total += num
+    return total
+
+main()
+
+#Week 5 Option 2: Option #2: Third String in Reverse Order
+#Wrote a program that accepts three string values using user input.
+#Using concatenation, the first two strings will be in order while the third will be reversed.
+
+def rev(one, two, three):
+    print("Reverse of the third string is",three[::-1])
+
+# returning concatenation of first two strings
+    return one+two
+
+def main():
+
+    # Taking user input of 3 strings
+    first = input("Enter first string:")
+    second = input("Enter second string:")
+    third = input("Enter third string:")
+
+
+    # calling function, passing three arguments
+    print("The first two strings are",rev(first, second, third))
+
+main()
+
+#Week 6 Option 2: List Computations
+#Computed the cartesian product of two lists. 
+#itertools helped completing this assignment. 
+
+import itertools
+
+print('Input numbers separated by a space')
+A = [int(x) for x in input().split()]
+print('Input numbers separated by a space')
+B = [int(y) for y in input().split()]
+
+print(*itertools.product(A, B))
