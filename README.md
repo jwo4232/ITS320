@@ -1,2 +1,2 @@
-# ITS320-Module-1
-Creating a basic Python Application
+# ITS320
+A compilation of the codes created during the CSU-Global class: ITS320
